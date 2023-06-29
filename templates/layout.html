@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {{ title }} {% endblock %} </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% block content %}
+	<div class="main-cont">
+	    <div class="cont-photo">
+		<img src="" alt="logo">
+	    </div>
+	    <div class="sntss-legend">
+	    </div>
+	</div>	
+    {% endblock %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js.js') }}"></script>
+</body>
+</html>

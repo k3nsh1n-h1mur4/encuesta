@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+	    <div class="col">
+		{% with message = get_flashed_messages() %}
+		    {% if message %}
+			<ul class="flashes">
+			    {% for message in messages %}
+			    <li>{{ message }}</li>
+			    {% endfor %}
+			</ul>
+		    {% endif %}
+		{% endwith %}
+	    </div>
+	</div>
+    </div>
+
+<div class="container">
+	<div class="row">
+	    <div class="col">
+		<h5>SINDICATO NACIONAL DE TRABAJADORES DEL SEGURO SOCIAL</h5>
+		<h5>SECCIÓN III, JALISCO</h5>
+		<h5>SECRETARÍA DE ACTOS Y FESTEJOS</h5>
+		<h6>Encuesta Selectiva Juguete 2023</h6>
+	    </div>
+	</div>
+</div>
+
+
+
+
+<div class="container mt-5" >
+    <div class="col">
+	<div class="row">
+	    <form class="form" method="POST">
+
+		<!-- <div class="form-group">
+		    <label for="folio">Folio de Vale</label>
+		    <input id="" type="text" name="folio" class="form-control">
+		</div> -->
+		<div class="form-group">
+		    <label for="matricula">Matrícula</label>
+		    <input id="" type="text" name="matricula", class="form-control">
+		</div>
+		<div class="form-group">
+		    <label for="nombre">Nombre Completo</label>
+		    <input id="" type="text" name="nombre" class="form-control">
+		</div>
+		<div class="form-group">
+		    <label for="pref">Elige la Opción de Tú interés</label>
+		    <select id="choice" name="choices">
+			<option value="Tarjeta Liverpool">Tarjeta Liverpool</option>
+			<option	value="Bicicleta">Bicicleta</option>
+		    </select>
+		</div>
+
+
+		<div>
+		    <input type="submit" value="Enviar Respuestas" class="btn btn-primary">
+		</div>
+	    </form>
+	</div>
+    </div>
+</div>
+
+{% endblock %}
