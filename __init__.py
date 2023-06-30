@@ -11,7 +11,7 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 
 
 app.config['SECRET_KEY'] = os.urandom(16)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://dbname=encuesta host=localhost user=postgres password=Z4dk13l2017**"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://dbname= host= user= password="
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -36,7 +36,7 @@ def encuesta():
         nombre = request.form['nombre']
         choices = request.form['choices']
         print(folio, choices)
-        con = psycopg2.connect("dbname=encuesta host=localhost user=postgres password=Z4dk13l2017**")
+        con = psycopg2.connect("dbname= host= user= password=")
         cur = con.cursor()
         cur.execute("INSERT INTO encuestatbl(folio, matricula, nombre, choices) VALUES(%s, %s, %s, %s)", (int(folio), matricula, nombre, choices))
         con.commit()
